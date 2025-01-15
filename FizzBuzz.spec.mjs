@@ -16,6 +16,12 @@ import { toFizzBuzzString } from './FizzBuzz.mjs';
  * we can get more complicated if we want
  */
 
-const actual = toFizzBuzzString(1);
-const expected = 1;
-console.log({ result: actual === expected ? '✅ PASS' : '❌ FAIL', actual, expected });
+
+[
+  { input: 1, expected: 1 }
+].forEach(({ input, expected }) => {
+  const actual = toFizzBuzzString(input);
+  console.log({ result: actual === expected ? '✅ PASS' : '❌ FAIL', actual, expected });
+});
+
+
