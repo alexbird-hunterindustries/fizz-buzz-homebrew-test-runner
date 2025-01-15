@@ -10,9 +10,9 @@
 
 ## What do we look for in a test runner?
 
-1. A way to compare actual and expected, and print the results
-2. (sometimes, depending on what we're testing) parameterized testing to run
+1. ✅ A way to compare actual and expected, and print the results
+2. ✅ (sometimes, depending on what we're testing) parameterized testing to run
    many similar tests
 3. Clear test names (in code and in the output)
 4. A pass/fail summary at the end
-5. Familiar structure
+5. ✅ Familiar structure
