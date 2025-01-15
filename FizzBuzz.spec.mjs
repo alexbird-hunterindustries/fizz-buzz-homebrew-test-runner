@@ -27,6 +27,7 @@ describe('toFizzBuzzString', () => {
     { input: 5, expected: "Buzz" },
     { input: 6, expected: "Fizz" },
     { input: 10, expected: "Buzz" },
+    { input: 15, expected: "FizzBuzz" },
   ].forEach(({ input, expected }) => {
 
     it(`returns ${expected} for ${input}`, () => {
