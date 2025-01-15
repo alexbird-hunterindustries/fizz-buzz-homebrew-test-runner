@@ -1,9 +1,10 @@
 export function toFizzBuzzString(index) {
-  if (index % 5 === 0) {
-    return "Buzz";
-  }
+  let result = '';
   if (index % 3 === 0) {
-    return "Fizz";
+    result += "Fizz";
   }
-  return index;
+  if (index % 5 === 0) {
+    result += "Buzz";
+  }
+  return result || index;
 }
