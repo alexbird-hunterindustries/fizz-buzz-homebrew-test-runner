@@ -14,4 +14,4 @@
  * we can get more complicated if we want
  */
 
-console.log('hello, world');
+console.log(1, toFizzBuzzString(1));
