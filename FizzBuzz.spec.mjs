@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+import { toFizzBuzzString } from './FizzBuzz.mjs';
+
 /*
  * # FizzBuzz
  *
