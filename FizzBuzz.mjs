@@ -1,3 +1,3 @@
 export function toFizzBuzzString(index) {
-  return 'todo';
+  return 1;
 }
