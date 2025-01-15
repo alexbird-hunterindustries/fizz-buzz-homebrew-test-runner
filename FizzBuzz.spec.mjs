@@ -16,4 +16,6 @@ import { toFizzBuzzString } from './FizzBuzz.mjs';
  * we can get more complicated if we want
  */
 
-console.log(1, toFizzBuzzString(1));
+const actual = toFizzBuzzString(1);
+const expected = 1;
+console.log({ result: actual === expected ? '✅ PASS' : '❌ FAIL', actual, expected });
