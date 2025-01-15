@@ -32,7 +32,7 @@ function printResults() {
     const statusColor = test.result.pass ? color.green : color.red;
     console.log(statusColor(`${icon} ${test.name}`));
     if (!test.result.pass) {
-      console.error('    ' + color.red(test.result.message));
+      console.error('    ' + color.red(test.result.message) + '\n');
     }
   });
   
