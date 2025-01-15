@@ -21,6 +21,7 @@ import { toFizzBuzzString } from './FizzBuzz.mjs';
   { input: 1, expected: 1 },
   { input: 2, expected: 2 },
   { input: 3, expected: "Fizz" },
+  { input: 4, expected: 4 },
 ].forEach(({ input, expected }) => {
   const actual = toFizzBuzzString(input);
   console.log({ result: actual === expected ? '✅ PASS' : '❌ FAIL', actual, expected });
