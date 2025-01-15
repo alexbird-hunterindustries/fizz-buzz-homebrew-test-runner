@@ -42,7 +42,7 @@ function printResults() {
   const allPass = everyTest.every(x => x.result.pass);
   console.log(`Tests: ran ${everyTest.length}, ${(color.red(`failed: ${failures}`))}, ${color.green(`passed: ${passes}`)}`);
   console.log('\n');
-  console.log(allPass ? color.green('PASS') : color.green('FAIL'));
+  console.log(allPass ? color.green('PASS') : color.red('FAIL'));
 }
 
 // Color codes come from the Stack Overflow hit for "Node console log color"
