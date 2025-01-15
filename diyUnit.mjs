@@ -1,1 +1,3 @@
-console.log('hello, DIY Unit');
+global.describe = (describeName, describeBody) => {
+
+}
