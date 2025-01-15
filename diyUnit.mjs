@@ -29,9 +29,10 @@ function printResults() {
   const everyTest = Object.entries(testResults).map(([name, result]) => ({ name, result }));
   everyTest.forEach(test => {
     const icon = test.result.pass ? '✔' : '𝙭';
-    console.log(`${icon} ${test.name}`);
+    const statusColor = test.result.pass ? color.green : color.red;
+    console.log(statusColor(`${icon} ${test.name}`));
     if (!test.result.pass) {
-      console.error('    ' + test.result.message);
+      console.error('    ' + color.red(test.result.message));
     }
   });
   
@@ -39,7 +40,14 @@ function printResults() {
   const failures = everyTest.filter(x => !x.result.pass).length;
   const passes = everyTest.filter(x => x.result.pass).length;
   const allPass = everyTest.every(x => x.result.pass);
-  console.log(`Tests: ran ${everyTest.length}, failed: ${failures}, passed: ${passes}`);
+  console.log(`Tests: ran ${everyTest.length}, ${(color.red(`failed: ${failures}`))}, ${color.green(`passed: ${passes}`)}`);
   console.log('\n');
-  console.log(allPass ? 'PASS' : 'FAIL');
+  console.log(allPass ? color.green('PASS') : color.green('FAIL'));
+}
+
+// Color codes come from the Stack Overflow hit for "Node console log color"
+// https://stackoverflow.com/a/41407246
+const color = {
+  red: text => `\x1b[31m${text}\x1b[0m`,
+  green: text => `\x1b[32m${text}\x1b[0m`,
 }

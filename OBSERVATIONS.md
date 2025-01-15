@@ -22,3 +22,4 @@
 1. ✅ Print test results (with failure details)
 2. ✅ Clear test names
 3. ✅ A pass/fail summary at the end
+4. ✅ Pretty output (colors, etc.)
